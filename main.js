@@ -31,6 +31,9 @@ new Vue({
       } else {
         return false
       }
+    },
+    clickPoint: function(i) {
+      this.selectedImage = i
     }
   }
 })

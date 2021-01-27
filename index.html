@@ -15,7 +15,7 @@
                     <i class="fas fa-angle-left" @click="prevImage"></i>
                 </div>
                 <div class="images">
-                    <img :src=images[selectedImage] alt="">
+                    <img :src=images[selectedImage] @keyup.39="nextImage()" alt="">
                     <!-- <img src="https://static.photocdn.pt/images/articles/2017/04/28/iStock-646511634.jpg" alt=""> -->
                     <!-- <img src="https://cdn.mos.cms.futurecdn.net/FUE7XiFApEqWZQ85wYcAfM.jpg" alt=""> -->
                     <!-- <img class="last" src="https://static.photocdn.pt/images/articles/2017/04/28/iStock-546424192.jpg" alt=""> -->
@@ -24,7 +24,7 @@
                     <i class="fas fa-angle-right" @click="nextImage"></i>
                 </div>
                 <div class="nav">
-                    <i v-for="(element, index) in images" class="fas fa-circle" :class="{active : addBluePoint(index)}"></i>
+                    <i v-for="(element, index) in images" @click="clickPoint(index)" class="fas fa-circle" :class="{active : addBluePoint(index)}"></i>
                     <!-- <i class="fas fa-circle"></i>
                     <i class="fas fa-circle"></i>
                     <i class="fas fa-circle last"></i> -->
