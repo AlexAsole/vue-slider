@@ -8,7 +8,7 @@ new Vue({
       'https://cdn.mos.cms.futurecdn.net/FUE7XiFApEqWZQ85wYcAfM.jpg',
       'https://static.photocdn.pt/images/articles/2017/04/28/iStock-546424192.jpg'
     ],
-    selectedImage: 0,
+    selectedImage: 0
   },
   methods: {
     nextImage: function() {
@@ -27,9 +27,9 @@ new Vue({
     },
     addBluePoint: function(i) {
       if(i === this.selectedImage) {
-        return 'active'
+        return true
       } else {
-        return ''
+        return false
       }
     }
   }

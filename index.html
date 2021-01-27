@@ -24,7 +24,7 @@
                     <i class="fas fa-angle-right" @click="nextImage"></i>
                 </div>
                 <div class="nav">
-                    <i v-for="(element, index) in images" :class="fas fa-circle addBluePoint(index)"></i>
+                    <i v-for="(element, index) in images" class="fas fa-circle" :class="{active : addBluePoint(index)}"></i>
                     <!-- <i class="fas fa-circle"></i>
                     <i class="fas fa-circle"></i>
                     <i class="fas fa-circle last"></i> -->
